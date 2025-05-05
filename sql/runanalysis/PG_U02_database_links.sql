@@ -16,24 +16,6 @@
 --
 -- Copyright :   NetCracker Technology Corporation 2012
 --
-/*
-column db_link	format a60
-column host	format a200
-column DB_LINK  format a40
-
-prompt SCRIPT: ORA_U02_database_links
-
-prompt CHECK: if integration is using database links
-
-SELECT  *
-FROM    dba_db_links;
-
-
-
-
-################################################################################
-################################################################################
-*/
 
 
 -- File :        U02_database_links.sql

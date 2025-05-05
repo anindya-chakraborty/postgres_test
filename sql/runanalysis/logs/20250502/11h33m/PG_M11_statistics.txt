@@ -46,8 +46,8 @@
  pg_toast | pg_toast_2609    | pg_toast_2609_index   | t         |        0 |             8192
  pg_toast | pg_toast_2612    | pg_toast_2612_index   | t         |        0 |             8192
  pg_toast | pg_toast_2615    | pg_toast_2615_index   | t         |        0 |             8192
- pg_toast | pg_toast_2618    | pg_toast_2618_index   | t         |    55764 |            16384
- pg_toast | pg_toast_2619    | pg_toast_2619_index   | t         |     1136 |            16384
+ pg_toast | pg_toast_2618    | pg_toast_2618_index   | t         |    55954 |            16384
+ pg_toast | pg_toast_2619    | pg_toast_2619_index   | t         |     1139 |            16384
  pg_toast | pg_toast_2620    | pg_toast_2620_index   | t         |        0 |             8192
  pg_toast | pg_toast_2964    | pg_toast_2964_index   | t         |        0 |             8192
  pg_toast | pg_toast_3079    | pg_toast_3079_index   | t         |        0 |             8192

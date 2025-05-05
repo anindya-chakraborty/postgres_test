@@ -35,7 +35,7 @@
 
  checkpoints_timed | checkpoints_req | checkpoint_write_time | checkpoint_sync_time | buffers_checkpoint 
 -------------------+-----------------+-----------------------+----------------------+--------------------
-              1714 |               4 |               7369190 |                  948 |             169984
+              1717 |               4 |               7369190 |                  948 |             169984
 (1 row)
 
  CHECK: WAL Archiving Status
