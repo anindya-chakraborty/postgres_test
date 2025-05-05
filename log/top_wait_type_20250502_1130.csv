@@ -1,0 +1,13 @@
+event_type,event,occurrences
+,,13
+Extension,Extension,6
+Activity,LogicalLauncherMain,6
+Activity,WalWriterMain,6
+Activity,AutoVacuumMain,6
+Activity,BgWriterHibernate,3
+Timeout,CheckpointWriteDelay,3
+Activity,BgWriterMain,3
+Activity,CheckpointerMain,3
+Lock,transactionid,2
+IO,DataFileRead,2
+IO,WALSync,1

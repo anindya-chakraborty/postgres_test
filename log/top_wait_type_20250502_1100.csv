@@ -1,0 +1,14 @@
+event_type,event,occurrences
+,,21
+Lock,transactionid,13
+LWLock,WALWrite,13
+Activity,WalWriterMain,5
+Activity,LogicalLauncherMain,5
+Activity,AutoVacuumMain,5
+Activity,BgWriterMain,5
+Extension,Extension,5
+IO,WALSync,4
+Lock,tuple,4
+Timeout,CheckpointWriteDelay,3
+Activity,CheckpointerMain,2
+IO,DataFileRead,2

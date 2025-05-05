@@ -1,0 +1,67 @@
+ SCRIPT: ORA_E01_redo_logs_defined
+
+ CHECK: WAL-related settings
+
+             name              |  setting  | unit |                                                 short_desc                                                 
+-------------------------------+-----------+------+------------------------------------------------------------------------------------------------------------
+ max_slot_wal_keep_size        | -1        | MB   | Sets the maximum WAL size that can be reserved by replication slots.
+ max_wal_senders               | 10        |      | Sets the maximum number of simultaneously running WAL sender processes.
+ max_wal_size                  | 1024      | MB   | Sets the WAL size that triggers a checkpoint.
+ min_wal_size                  | 80        | MB   | Sets the minimum size to shrink the WAL to.
+ track_wal_io_timing           | off       |      | Collects timing statistics for WAL I/O activity.
+ wal_block_size                | 8192      |      | Shows the block size in the write ahead log.
+ wal_buffers                   | 512       | 8kB  | Sets the number of disk-page buffers in shared memory for WAL.
+ wal_compression               | off       |      | Compresses full-page writes written in WAL file with specified method.
+ wal_consistency_checking      |           |      | Sets the WAL resource managers for which WAL consistency checks are done.
+ wal_decode_buffer_size        | 524288    | B    | Buffer size for reading ahead in the WAL during recovery.
+ wal_init_zero                 | on        |      | Writes zeroes to new WAL files before first use.
+ wal_keep_size                 | 0         | MB   | Sets the size of WAL files held for standby servers.
+ wal_level                     | replica   |      | Sets the level of information written to the WAL.
+ wal_log_hints                 | off       |      | Writes full pages to WAL when first modified after a checkpoint, even for a non-critical modification.
+ wal_receiver_create_temp_slot | off       |      | Sets whether a WAL receiver should create a temporary replication slot if no permanent slot is configured.
+ wal_receiver_status_interval  | 10        | s    | Sets the maximum interval between WAL receiver status reports to the sending server.
+ wal_receiver_timeout          | 60000     | ms   | Sets the maximum wait time to receive data from the sending server.
+ wal_recycle                   | on        |      | Recycles WAL files by renaming them.
+ wal_retrieve_retry_interval   | 5000      | ms   | Sets the time to wait before retrying to retrieve WAL after a failed attempt.
+ wal_segment_size              | 16777216  | B    | Shows the size of write ahead log segments.
+ wal_sender_timeout            | 60000     | ms   | Sets the maximum time to wait for WAL replication.
+ wal_skip_threshold            | 2048      | kB   | Minimum size of new file to fsync instead of writing WAL.
+ wal_sync_method               | fdatasync |      | Selects the method used for forcing WAL updates to disk.
+ wal_writer_delay              | 200       | ms   | Time between WAL flushes performed in the WAL writer.
+ wal_writer_flush_after        | 128       | 8kB  | Amount of WAL written out by WAL writer that triggers a flush.
+(25 rows)
+
+ CHECK: WAL activity from pg_stat_bgwriter
+
+ checkpoints_timed | checkpoints_req | checkpoint_write_time | checkpoint_sync_time | buffers_checkpoint 
+-------------------+-----------------+-----------------------+----------------------+--------------------
+              1714 |               4 |               7369190 |                  948 |             169984
+(1 row)
+
+ CHECK: WAL Archiving Status
+
+ archive_mode 
+--------------
+ off
+(1 row)
+
+ CHECK: Replication Slots
+
+ slot_name | plugin | slot_type | datoid | database | temporary | active | active_pid | xmin | catalog_xmin | restart_lsn | confirmed_flush_lsn | wal_status | safe_wal_size | two_phase | conflicting 
+-----------+--------+-----------+--------+----------+-----------+--------+------------+------+--------------+-------------+---------------------+------------+---------------+-----------+-------------
+(0 rows)
+
+ CHECK: WAL Segment Size
+
+ wal_segment_size 
+------------------
+ 16777216 bytes
+(1 row)
+
+ CHECK: synchronous_commit setting
+
+ setting 
+---------
+ on
+(1 row)
+

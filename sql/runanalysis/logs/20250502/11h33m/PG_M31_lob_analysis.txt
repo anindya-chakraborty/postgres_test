@@ -1,0 +1,49 @@
+ SCRIPT: ORA_M31_lob_analysis (PostgreSQL Version)
+
+ STATS: show information about LOB columns and their storage (non-system schemas)
+
+   owner    |         table_name         |   column_name    | tablespace_name | gbytes 
+------------+----------------------------+------------------+-----------------+--------
+ cron       | job                        | command          |                 |      0
+ cron       | job                        | database         |                 |      0
+ cron       | job                        | jobname          |                 |      0
+ cron       | job                        | nodename         |                 |      0
+ cron       | job                        | schedule         |                 |      0
+ cron       | job                        | username         |                 |      0
+ cron       | job_run_details            | command          |                 |      0
+ cron       | job_run_details            | database         |                 |      0
+ cron       | job_run_details            | return_message   |                 |      0
+ cron       | job_run_details            | status           |                 |      0
+ cron       | job_run_details            | username         |                 |      0
+ cron       | jobname_username_uniq      | jobname          |                 |      0
+ cron       | jobname_username_uniq      | username         |                 |      0
+ public     | pg_stat_statements         | query            |                 |      0
+ public     | pg_wait_sampling_current   | event            |                 |      0
+ public     | pg_wait_sampling_current   | event_type       |                 |      0
+ public     | pg_wait_sampling_history   | event            |                 |      0
+ public     | pg_wait_sampling_history   | event_type       |                 |      0
+ public     | pg_wait_sampling_profile   | event            |                 |      0
+ public     | pg_wait_sampling_profile   | event_type       |                 |      0
+ statistics | ash_session_sample         | application_name |                 |      0
+ statistics | ash_session_sample         | backend_type     |                 |      0
+ statistics | ash_session_sample         | query            |                 |      0
+ statistics | ash_session_sample         | state            |                 |      0
+ statistics | ash_session_sample         | usename          |                 |      0
+ statistics | ash_session_sample         | wait_event       |                 |      0
+ statistics | ash_session_sample         | wait_event_type  |                 |      0
+ statistics | ash_stat_statements_sample | query            |                 |      0
+ statistics | ash_wait_sampling_sample   | event            |                 |      0
+ statistics | ash_wait_sampling_sample   | event_type       |                 |      0
+(30 rows)
+
+ STATS: show information about associated TOAST tables and LOB indexes
+
+   owner    |         table_name         |  toast_table   | gbytes 
+------------+----------------------------+----------------+--------
+ cron       | job                        | pg_toast_16651 |      0
+ cron       | job_run_details            | pg_toast_16670 |      0
+ statistics | ash_session_sample         | pg_toast_16697 |      0
+ statistics | ash_stat_statements_sample | pg_toast_16703 |      0
+ statistics | ash_wait_sampling_sample   | pg_toast_16708 |      0
+(5 rows)
+

@@ -1,0 +1,10 @@
+ SCRIPT: U02_database_links
+
+ oid | extname | extowner | extnamespace | extrelocatable | extversion | extconfig | extcondition 
+-----+---------+----------+--------------+----------------+------------+-----------+--------------
+(0 rows)
+
+ oid | srvname | srvowner | srvfdw | srvtype | srvversion | srvacl | srvoptions 
+-----+---------+----------+--------+---------+------------+--------+------------
+(0 rows)
+

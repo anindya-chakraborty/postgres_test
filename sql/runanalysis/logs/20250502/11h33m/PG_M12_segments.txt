@@ -1,0 +1,51 @@
+ SCRIPT: ORA_M12_segments
+
+ Segments owned by non-system users (excluding pg_catalog, information_schema)
+
+   owner    |        segment_name        | partition_name | segment_type | tablespace_name | header_file | header_block |         gbytes         | blocks | extents | initial_extent | next_extent | min_extents | max_extents | pct_increase | freelists | freelist_groups | relative_fno | buffer_pool 
+------------+----------------------------+----------------+--------------+-----------------+-------------+--------------+------------------------+--------+---------+----------------+-------------+-------------+-------------+--------------+-----------+-----------------+--------------+-------------
+ statistics | ash_session_sample         |                | r            |                 |             |              | 0.00000000000000000000 |      6 |         |                |             |             |             |              |           |                 |              | 
+ statistics | ash_stat_statements_sample |                | r            |                 |             |              | 0.01367187500000000000 |   1644 |         |                |             |             |             |              |           |                 |              | 
+ statistics | ash_wait_sampling_sample   |                | r            |                 |             |              | 0.00000000000000000000 |      9 |         |                |             |             |             |              |           |                 |              | 
+ cron       | job                        |                | r            |                 |             |              | 0.00000000000000000000 |      1 |         |                |             |             |             |              |           |                 |              | 
+ cron       | job_pkey                   |                | i            |                 |             |              | 0.00000000000000000000 |      2 |         |                |             |             |             |              |           |                 |              | 
+ cron       | job_run_details            |                | r            |                 |             |              | 0.00000000000000000000 |      3 |         |                |             |             |             |              |           |                 |              | 
+ cron       | job_run_details_pkey       |                | i            |                 |             |              | 0.00000000000000000000 |      2 |         |                |             |             |             |              |           |                 |              | 
+ cron       | jobname_username_uniq      |                | i            |                 |             |              | 0.00000000000000000000 |      2 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_accounts           |                | r            |                 |             |              | 0.15136718750000000000 |  17097 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_accounts_pkey      |                | i            |                 |             |              | 0.02050781250000000000 |   2745 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_branches           |                | r            |                 |             |              | 0.00000000000000000000 |      8 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_branches_pkey      |                | i            |                 |             |              | 0.00000000000000000000 |      2 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_history            |                | r            |                 |             |              | 0.08105468750000000000 |  10629 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_tellers            |                | r            |                 |             |              | 0.00000000000000000000 |     43 |         |                |             |             |             |              |           |                 |              | 
+ public     | pgbench_tellers_pkey       |                | i            |                 |             |              | 0.00000000000000000000 |      2 |         |                |             |             |             |              |           |                 |              | 
+(15 rows)
+
+ Segments larger than 100MB for a specific schema
+
+   segment_name   | partition_name | segment_type |         gbytes         
+------------------+----------------+--------------+------------------------
+ pgbench_accounts |                | r            | 0.15136718750000000000
+(1 row)
+
+ All segments > 1GB (excluding system schemas)
+
+ owner | segment_name | segment_type | gbytes 
+-------+--------------+--------------+--------
+(0 rows)
+
+ Tables listed in DATAMANAGEMENTCONTROL > 1GB
+
+ Total space per user (schema) > 5GB
+
+ owner | gbytes 
+-------+--------
+(0 rows)
+
+ Size of system schemas
+
+       sys_gbytes       
+------------------------
+ 0.01464843750000000000
+(1 row)
+

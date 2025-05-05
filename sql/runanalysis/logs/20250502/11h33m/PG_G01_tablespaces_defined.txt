@@ -1,0 +1,53 @@
+ SCRIPT: ORA_E03_archive_logs_defined
+
+  List all tablespaces defined in PostgreSQL
+
+ tablespace_name 
+-----------------
+ pg_default
+ pg_global
+(2 rows)
+
+  Check attributes of all tablespaces except TEMP and UNDO (assuming no such categories in PostgreSQL)
+
+ tablespace_name | size 
+-----------------+------
+(0 rows)
+
+  List the sizes of non-temporary tablespaces in PostgreSQL
+
+ tablespace_name | size 
+-----------------+------
+(0 rows)
+
+  Show how much space is used in each permanent tablespace
+
+ tablespace_name | total_size | used_size 
+-----------------+------------+-----------
+(0 rows)
+
+  List the file locations for tablespaces in PostgreSQL
+
+ tablespace_name | location 
+-----------------+----------
+(0 rows)
+
+  Check I/O statistics in PostgreSQL
+
+ checkpoints_timed | checkpoints_req | checkpoint_write_time | checkpoint_sync_time | buffers_checkpoint | buffers_clean | maxwritten_clean | buffers_backend | buffers_backend_fsync | buffers_alloc |          stats_reset          
+-------------------+-----------------+-----------------------+----------------------+--------------------+---------------+------------------+-----------------+-----------------------+---------------+-------------------------------
+              1714 |               4 |               7369190 |                  948 |             169984 |       2186049 |            15818 |          743851 |                     0 |       2492861 | 2025-04-29 10:48:22.805582+00
+(1 row)
+
+  List the sizes and utilization of each temporary tablespace
+
+ tablespace_name | size 
+-----------------+------
+(0 rows)
+
+  List the data files associated with temporary tablespaces
+
+ temp_file | size 
+-----------+------
+(0 rows)
+

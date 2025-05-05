@@ -1,0 +1,158 @@
+
+
+ -- Active Connections by State
+
+State, Count
+-------------------------------------------------------------------------------------
+None,7
+active,12
+idle in transaction,1
+-------------------------------------------------------------------------------------
+
+
+ -- Number of connected users
+
+User
+-------------------------------------------------------------------------------------
+postgres
+-------------------------------------------------------------------------------------
+
+
+ -- Long Running Queries (> 5 mins)
+
+PID, User, DB, Duration, Query
+-------------------------------------------------------------------------------------
+No data
+-------------------------------------------------------------------------------------
+
+
+ -- Top 10 Queries by Execution Time
+
+PID, Runtime
+-------------------------------------------------------------------------------------
+204029,00:00:00
+204027,-00:00:00.000194
+204028,-00:00:00.036739
+203333,-00:00:00.119885
+203335,-00:00:00.119926
+203330,-00:00:00.119964
+203331,-00:00:00.122238
+203328,-00:00:00.122756
+203327,-00:00:00.124169
+203329,-00:00:00.124364
+-------------------------------------------------------------------------------------
+
+
+ -- Top 10 Queries by Total Time
+
+QueryID,Calls,TotalTime_ms,AvgTime_ms,Rows,QuerySnippet
+-------------------------------------------------------------------------------------
+-9109821489976357070,7220953,20195977.55,2.80,7220953,"UPDATE pgbench_branches SET bbalance = bbalance + $1 WHERE bid = $2"
+-7451911980728475430,7220955,5063636.84,.70,7220955,"UPDATE pgbench_tellers SET tbalance = tbalance + $1 WHERE tid = $2"
+2329222853721928598,1084640,1820169.49,1.68,1084640,"UPDATE pgbench_branches SET bbalance = bbalance + $1 WHERE bid = $2"
+2051070099990592440,1099350,1420076.06,1.29,1099350,"UPDATE pgbench_branches SET bbalance = bbalance + $1 WHERE bid = $2"
+-3421300651483383805,1084642,336595.09,.31,1084642,"UPDATE pgbench_tellers SET tbalance = tbalance + $1 WHERE tid = $2"
+-7291381006443559864,1099350,264707.90,.24,1099350,"UPDATE pgbench_tellers SET tbalance = tbalance + $1 WHERE tid = $2"
+-7251278816143076185,7220955,162537.75,.02,7220955,"UPDATE pgbench_accounts SET abalance = abalance + $1 WHERE aid = $2"
+-2633333886339468521,7220955,49248.52,.01,7220955,"SELECT abalance FROM pgbench_accounts WHERE aid = $1"
+432235641291382873,7220945,43160.68,.01,7220945,"INSERT INTO pgbench_history (tid, bid, aid, delta, mtime) VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP)"
+4169521388299080407,1099350,29729.89,.03,1099350,"UPDATE pgbench_accounts SET abalance = abalance + $1 WHERE aid = $2"
+-------------------------------------------------------------------------------------
+
+
+ -- Top 10 Queries by Average Execution Time
+
+QueryID,Calls,AvgTime_ms,TotalTime_ms,QuerySnippet
+-------------------------------------------------------------------------------------
+-1864079628023708478,3,986.64,2959.92,"copy pgbench_accounts from stdin with (freeze on)"
+-482695347757582063,1,617.56,617.56,"select * from pgbench_accounts"
+8527841720120159031,3,428.34,1285.03,"alter table pgbench_accounts add primary key (aid)"
+4632729219652348757,7,188.68,1320.75,"SELECT statistics.dump_activity_snapshot()"
+2532311607333901906,1,115.67,115.67,"select * from statistics.temp_pg_wait_sampling_get_history"
+1921593885245078624,3,114.97,344.90,"vacuum analyze pgbench_accounts"
+4656179857699114895,1,91.01,91.01,"select count($1) from pgbench_accounts"
+-5683009709758562171,55,83.35,4584.48,"SELECT statistics.load_ash_waits_data()"
+4026511666484163564,1,73.43,73.43,"create extension pg_cron"
+-5481413552079561874,23,58.39,1342.96,"SELECT statistics.run_health_check()"
+-------------------------------------------------------------------------------------
+
+
+ -- Blocking and Blocked Queries
+
+blocked_pid,blocked_query,blocking_pid,blocking_query
+-------------------------------------------------------------------------------------
+No data
+-------------------------------------------------------------------------------------
+
+
+ -- Database block info
+
+db_name, connections, db_size, xact_commit, xact_rollback, blks_read, blks_hit
+-------------------------------------------------------------------------------------
+,0,,0,0,1595
+postgres,14,228 MB,9423076,199,3120792
+template1,0,7780 kB,9596,0,4207
+template0,0,7553 kB,0,0,0
+-------------------------------------------------------------------------------------
+
+
+ -- Processes with Wait Events
+
+usename, DBname, query, wait_event_type, wait_event
+-------------------------------------------------------------------------------------
+postgres,postgres,END;,Lock,transactionid
+postgres,postgres,END;,IO,WALSync
+-------------------------------------------------------------------------------------
+
+
+ -- Buffer Cache Usage by Relation
+
+Relation, Buffers, Size (MB)
+-------------------------------------------------------------------------------------
+pgbench_accounts,11885,92.00
+pgbench_accounts_pkey,2744,21.00
+statistics.ash_stat_statements_sample,1167,9.00
+pgbench_history,222,1.00
+pg_attribute,36,0.00
+pg_proc,34,0.00
+pg_toast.pg_toast_16703,25,0.00
+pgbench_tellers,22,0.00
+pg_statistic,13,0.00
+pg_proc_proname_args_nsp_index,13,0.00
+-------------------------------------------------------------------------------------
+
+
+ -- Buffer Cache Usage by Schema
+
+Schema, Buffers, Size (MB)
+-------------------------------------------------------------------------------------
+public,14877,116.00
+statistics,1183,9.00
+pg_catalog,263,2.00
+pg_toast,41,0.00
+cron,3,0.00
+-------------------------------------------------------------------------------------
+
+
+ -- WAL Statistics
+
+WAL Records, WAL FPIs, WAL Bytes, WAL Write, WAL sync, WAL write time, WAL sync time, Stats Reset
+-------------------------------------------------------------------------------------
+63284542,404703,7604121248,3986012,3951252,0,0,2025-04-29 10:48:22.805582+00
+-------------------------------------------------------------------------------------
+
+
+ -- WAL Switch Statistics
+
+Control Checkpoint count
+-------------------------------------------------------------------------------------
+1
+-------------------------------------------------------------------------------------
+
+
+ -- WAL Archiver Statistics
+
+Archived, Failed, Last Archived WAL, Last Archived WAL Time, Last Failed WAL, Last Failed WAL Time, Stats Reset
+-------------------------------------------------------------------------------------
+0,0,,,,,2025-04-29 10:48:22.805582+00
+-------------------------------------------------------------------------------------

@@ -1,0 +1,315 @@
+  List size (in bytes) for each relation (table, index, etc.)
+
+    schema_name     | segment_type | tablespace_name |                  segment_name                  | segment_size_bytes 
+--------------------+--------------+-----------------+------------------------------------------------+--------------------
+ pg_catalog         | i            | pg_global       | pg_auth_members_grantor_index                  |              16384
+ pg_catalog         | i            | pg_global       | pg_auth_members_member_role_index              |              16384
+ pg_catalog         | i            | pg_global       | pg_auth_members_oid_index                      |              16384
+ pg_catalog         | i            | pg_global       | pg_auth_members_role_member_index              |              16384
+ pg_catalog         | i            | pg_global       | pg_authid_oid_index                            |              16384
+ pg_catalog         | i            | pg_global       | pg_authid_rolname_index                        |              16384
+ pg_catalog         | i            | pg_global       | pg_database_datname_index                      |              16384
+ pg_catalog         | i            | pg_global       | pg_database_oid_index                          |              16384
+ pg_catalog         | i            | pg_global       | pg_db_role_setting_databaseid_rol_index        |               8192
+ pg_catalog         | i            | pg_global       | pg_parameter_acl_oid_index                     |               8192
+ pg_catalog         | i            | pg_global       | pg_parameter_acl_parname_index                 |               8192
+ pg_catalog         | i            | pg_global       | pg_replication_origin_roiident_index           |               8192
+ pg_catalog         | i            | pg_global       | pg_replication_origin_roname_index             |               8192
+ pg_catalog         | i            | pg_global       | pg_shdepend_depender_index                     |              16384
+ pg_catalog         | i            | pg_global       | pg_shdepend_reference_index                    |              16384
+ pg_catalog         | i            | pg_global       | pg_shdescription_o_c_index                     |              16384
+ pg_catalog         | i            | pg_global       | pg_shseclabel_object_index                     |               8192
+ pg_catalog         | i            | pg_global       | pg_subscription_oid_index                      |               8192
+ pg_catalog         | i            | pg_global       | pg_subscription_subname_index                  |               8192
+ pg_catalog         | i            | pg_global       | pg_tablespace_oid_index                        |              16384
+ pg_catalog         | i            | pg_global       | pg_tablespace_spcname_index                    |              16384
+ pg_toast           | i            | pg_global       | pg_toast_1213_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_1260_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_1262_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_2396_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_2964_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_3592_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_6000_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_6100_index                            |               8192
+ pg_toast           | i            | pg_global       | pg_toast_6243_index                            |               8192
+ pg_catalog         | r            | pg_global       | pg_auth_members                                |              40960
+ pg_catalog         | r            | pg_global       | pg_authid                                      |              49152
+ pg_catalog         | r            | pg_global       | pg_database                                    |              49152
+ pg_catalog         | r            | pg_global       | pg_db_role_setting                             |               8192
+ pg_catalog         | r            | pg_global       | pg_parameter_acl                               |               8192
+ pg_catalog         | r            | pg_global       | pg_replication_origin                          |               8192
+ pg_catalog         | r            | pg_global       | pg_shdepend                                    |               8192
+ pg_catalog         | r            | pg_global       | pg_shdescription                               |              49152
+ pg_catalog         | r            | pg_global       | pg_shseclabel                                  |               8192
+ pg_catalog         | r            | pg_global       | pg_subscription                                |               8192
+ pg_catalog         | r            | pg_global       | pg_tablespace                                  |              49152
+ pg_toast           | t            | pg_global       | pg_toast_1213                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_1260                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_1262                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_2396                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_2964                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_3592                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_6000                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_6100                                  |                  0
+ pg_toast           | t            | pg_global       | pg_toast_6243                                  |                  0
+ cron               | i            |                 | job_pkey                                       |              16384
+ cron               | i            |                 | job_run_details_pkey                           |              16384
+ cron               | i            |                 | jobname_username_uniq                          |              16384
+ pg_catalog         | i            |                 | pg_aggregate_fnoid_index                       |              16384
+ pg_catalog         | i            |                 | pg_am_name_index                               |              16384
+ pg_catalog         | i            |                 | pg_am_oid_index                                |              16384
+ pg_catalog         | i            |                 | pg_amop_fam_strat_index                        |              49152
+ pg_catalog         | i            |                 | pg_amop_oid_index                              |              40960
+ pg_catalog         | i            |                 | pg_amop_opr_fam_index                          |              49152
+ pg_catalog         | i            |                 | pg_amproc_fam_proc_index                       |              40960
+ pg_catalog         | i            |                 | pg_amproc_oid_index                            |              32768
+ pg_catalog         | i            |                 | pg_attrdef_adrelid_adnum_index                 |              16384
+ pg_catalog         | i            |                 | pg_attrdef_oid_index                           |              16384
+ pg_catalog         | i            |                 | pg_attribute_relid_attnam_index                |             163840
+ pg_catalog         | i            |                 | pg_attribute_relid_attnum_index                |             114688
+ pg_catalog         | i            |                 | pg_cast_oid_index                              |              16384
+ pg_catalog         | i            |                 | pg_cast_source_target_index                    |              16384
+ pg_catalog         | i            |                 | pg_class_oid_index                             |              32768
+ pg_catalog         | i            |                 | pg_class_relname_nsp_index                     |              40960
+ pg_catalog         | i            |                 | pg_class_tblspc_relfilenode_index              |              32768
+ pg_catalog         | i            |                 | pg_collation_name_enc_nsp_index                |             106496
+ pg_catalog         | i            |                 | pg_collation_oid_index                         |              57344
+ pg_catalog         | i            |                 | pg_constraint_conname_nsp_index                |              16384
+ pg_catalog         | i            |                 | pg_constraint_conparentid_index                |              16384
+ pg_catalog         | i            |                 | pg_constraint_conrelid_contypid_conname_index  |              16384
+ pg_catalog         | i            |                 | pg_constraint_contypid_index                   |              16384
+ pg_catalog         | i            |                 | pg_constraint_oid_index                        |              16384
+ pg_catalog         | i            |                 | pg_conversion_default_index                    |              16384
+ pg_catalog         | i            |                 | pg_conversion_name_nsp_index                   |              16384
+ pg_catalog         | i            |                 | pg_conversion_oid_index                        |              16384
+ pg_catalog         | i            |                 | pg_default_acl_oid_index                       |               8192
+ pg_catalog         | i            |                 | pg_default_acl_role_nsp_obj_index              |               8192
+ pg_catalog         | i            |                 | pg_depend_depender_index                       |              98304
+ pg_catalog         | i            |                 | pg_depend_reference_index                      |              73728
+ pg_catalog         | i            |                 | pg_description_o_c_o_index                     |             221184
+ pg_catalog         | i            |                 | pg_enum_oid_index                              |               8192
+ pg_catalog         | i            |                 | pg_enum_typid_label_index                      |               8192
+ pg_catalog         | i            |                 | pg_enum_typid_sortorder_index                  |               8192
+ pg_catalog         | i            |                 | pg_event_trigger_evtname_index                 |               8192
+ pg_catalog         | i            |                 | pg_event_trigger_oid_index                     |               8192
+ pg_catalog         | i            |                 | pg_extension_name_index                        |              16384
+ pg_catalog         | i            |                 | pg_extension_oid_index                         |              16384
+ pg_catalog         | i            |                 | pg_foreign_data_wrapper_name_index             |               8192
+ pg_catalog         | i            |                 | pg_foreign_data_wrapper_oid_index              |               8192
+ pg_catalog         | i            |                 | pg_foreign_server_name_index                   |               8192
+ pg_catalog         | i            |                 | pg_foreign_server_oid_index                    |               8192
+ pg_catalog         | i            |                 | pg_foreign_table_relid_index                   |               8192
+ pg_catalog         | i            |                 | pg_index_indexrelid_index                      |              16384
+ pg_catalog         | i            |                 | pg_index_indrelid_index                        |              16384
+ pg_catalog         | i            |                 | pg_inherits_parent_index                       |               8192
+ pg_catalog         | i            |                 | pg_inherits_relid_seqno_index                  |               8192
+ pg_catalog         | i            |                 | pg_init_privs_o_c_o_index                      |              16384
+ pg_catalog         | i            |                 | pg_language_name_index                         |              16384
+ pg_catalog         | i            |                 | pg_language_oid_index                          |              16384
+ pg_catalog         | i            |                 | pg_largeobject_loid_pn_index                   |               8192
+ pg_catalog         | i            |                 | pg_largeobject_metadata_oid_index              |               8192
+ pg_catalog         | i            |                 | pg_namespace_nspname_index                     |              16384
+ pg_catalog         | i            |                 | pg_namespace_oid_index                         |              16384
+ pg_catalog         | i            |                 | pg_opclass_am_name_nsp_index                   |              16384
+ pg_catalog         | i            |                 | pg_opclass_oid_index                           |              16384
+ pg_catalog         | i            |                 | pg_operator_oid_index                          |              40960
+ pg_catalog         | i            |                 | pg_operator_oprname_l_r_n_index                |              49152
+ pg_catalog         | i            |                 | pg_opfamily_am_name_nsp_index                  |              16384
+ pg_catalog         | i            |                 | pg_opfamily_oid_index                          |              16384
+ pg_catalog         | i            |                 | pg_partitioned_table_partrelid_index           |               8192
+ pg_catalog         | i            |                 | pg_policy_oid_index                            |              16384
+ pg_catalog         | i            |                 | pg_policy_polrelid_polname_index               |              16384
+ pg_catalog         | i            |                 | pg_proc_oid_index                              |              98304
+ pg_catalog         | i            |                 | pg_proc_proname_args_nsp_index                 |             278528
+ pg_catalog         | i            |                 | pg_publication_namespace_oid_index             |               8192
+ pg_catalog         | i            |                 | pg_publication_namespace_pnnspid_pnpubid_index |               8192
+ pg_catalog         | i            |                 | pg_publication_oid_index                       |               8192
+ pg_catalog         | i            |                 | pg_publication_pubname_index                   |               8192
+ pg_catalog         | i            |                 | pg_publication_rel_oid_index                   |               8192
+ pg_catalog         | i            |                 | pg_publication_rel_prpubid_index               |               8192
+ pg_catalog         | i            |                 | pg_publication_rel_prrelid_prpubid_index       |               8192
+ pg_catalog         | i            |                 | pg_range_rngmultitypid_index                   |              16384
+ pg_catalog         | i            |                 | pg_range_rngtypid_index                        |              16384
+ pg_catalog         | i            |                 | pg_rewrite_oid_index                           |              16384
+ pg_catalog         | i            |                 | pg_rewrite_rel_rulename_index                  |              16384
+ pg_catalog         | i            |                 | pg_seclabel_object_index                       |               8192
+ pg_catalog         | i            |                 | pg_sequence_seqrelid_index                     |              16384
+ pg_catalog         | i            |                 | pg_statistic_ext_data_stxoid_inh_index         |               8192
+ pg_catalog         | i            |                 | pg_statistic_ext_name_index                    |               8192
+ pg_catalog         | i            |                 | pg_statistic_ext_oid_index                     |               8192
+ pg_catalog         | i            |                 | pg_statistic_ext_relid_index                   |               8192
+ pg_catalog         | i            |                 | pg_statistic_relid_att_inh_index               |              32768
+ pg_catalog         | i            |                 | pg_subscription_rel_srrelid_srsubid_index      |               8192
+ pg_toast           | i            |                 | pg_toast_1247_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_1255_index                            |              16384
+ pg_toast           | i            |                 | pg_toast_1417_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_1418_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_14376_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_14381_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_14386_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_14391_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_16651_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_16670_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_16697_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_16703_index                           |              49152
+ pg_toast           | i            |                 | pg_toast_16708_index                           |               8192
+ pg_toast           | i            |                 | pg_toast_2328_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2600_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2604_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2606_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2609_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2612_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2615_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_2618_index                            |              16384
+ pg_toast           | i            |                 | pg_toast_2619_index                            |              16384
+ pg_toast           | i            |                 | pg_toast_2620_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3079_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3118_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3256_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3350_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3381_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3394_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3429_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3456_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3466_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3596_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_3600_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_6106_index                            |               8192
+ pg_toast           | i            |                 | pg_toast_826_index                             |               8192
+ pg_catalog         | i            |                 | pg_transform_oid_index                         |               8192
+ pg_catalog         | i            |                 | pg_transform_type_lang_index                   |               8192
+ pg_catalog         | i            |                 | pg_trigger_oid_index                           |              16384
+ pg_catalog         | i            |                 | pg_trigger_tgconstraint_index                  |              16384
+ pg_catalog         | i            |                 | pg_trigger_tgrelid_tgname_index                |              16384
+ pg_catalog         | i            |                 | pg_ts_config_cfgname_index                     |              16384
+ pg_catalog         | i            |                 | pg_ts_config_map_index                         |              32768
+ pg_catalog         | i            |                 | pg_ts_config_oid_index                         |              16384
+ pg_catalog         | i            |                 | pg_ts_dict_dictname_index                      |              16384
+ pg_catalog         | i            |                 | pg_ts_dict_oid_index                           |              16384
+ pg_catalog         | i            |                 | pg_ts_parser_oid_index                         |              16384
+ pg_catalog         | i            |                 | pg_ts_parser_prsname_index                     |              16384
+ pg_catalog         | i            |                 | pg_ts_template_oid_index                       |              16384
+ pg_catalog         | i            |                 | pg_ts_template_tmplname_index                  |              16384
+ pg_catalog         | i            |                 | pg_type_oid_index                              |              32768
+ pg_catalog         | i            |                 | pg_type_typname_nsp_index                      |              49152
+ pg_catalog         | i            |                 | pg_user_mapping_oid_index                      |               8192
+ pg_catalog         | i            |                 | pg_user_mapping_user_server_index              |               8192
+ public             | i            |                 | pgbench_accounts_pkey                          |           22487040
+ public             | i            |                 | pgbench_branches_pkey                          |              16384
+ public             | i            |                 | pgbench_tellers_pkey                           |              16384
+ statistics         | r            |                 | ash_session_sample                             |              81920
+ statistics         | r            |                 | ash_stat_statements_sample                     |           15433728
+ statistics         | r            |                 | ash_wait_sampling_sample                       |             106496
+ cron               | r            |                 | job                                            |              16384
+ cron               | r            |                 | job_run_details                                |              57344
+ pg_catalog         | r            |                 | pg_aggregate                                   |              57344
+ pg_catalog         | r            |                 | pg_am                                          |              40960
+ pg_catalog         | r            |                 | pg_amop                                        |              90112
+ pg_catalog         | r            |                 | pg_amproc                                      |              73728
+ pg_catalog         | r            |                 | pg_attrdef                                     |              16384
+ pg_catalog         | r            |                 | pg_attribute                                   |             647168
+ pg_catalog         | r            |                 | pg_cast                                        |              49152
+ pg_catalog         | r            |                 | pg_class                                       |             147456
+ pg_catalog         | r            |                 | pg_collation                                   |             303104
+ pg_catalog         | r            |                 | pg_constraint                                  |              65536
+ pg_catalog         | r            |                 | pg_conversion                                  |              49152
+ pg_catalog         | r            |                 | pg_default_acl                                 |               8192
+ pg_catalog         | r            |                 | pg_depend                                      |             163840
+ pg_catalog         | r            |                 | pg_description                                 |             409600
+ pg_catalog         | r            |                 | pg_enum                                        |                  0
+ pg_catalog         | r            |                 | pg_event_trigger                               |               8192
+ pg_catalog         | r            |                 | pg_extension                                   |              49152
+ pg_catalog         | r            |                 | pg_foreign_data_wrapper                        |               8192
+ pg_catalog         | r            |                 | pg_foreign_server                              |               8192
+ pg_catalog         | r            |                 | pg_foreign_table                               |               8192
+ pg_catalog         | r            |                 | pg_index                                       |              73728
+ pg_catalog         | r            |                 | pg_inherits                                    |                  0
+ pg_catalog         | r            |                 | pg_init_privs                                  |              65536
+ pg_catalog         | r            |                 | pg_language                                    |              49152
+ pg_catalog         | r            |                 | pg_largeobject                                 |                  0
+ pg_catalog         | r            |                 | pg_largeobject_metadata                        |                  0
+ pg_catalog         | r            |                 | pg_namespace                                   |              49152
+ pg_catalog         | r            |                 | pg_opclass                                     |              57344
+ pg_catalog         | r            |                 | pg_operator                                    |             147456
+ pg_catalog         | r            |                 | pg_opfamily                                    |              49152
+ pg_catalog         | r            |                 | pg_partitioned_table                           |               8192
+ pg_catalog         | r            |                 | pg_policy                                      |              16384
+ pg_catalog         | r            |                 | pg_proc                                        |             950272
+ pg_catalog         | r            |                 | pg_publication                                 |                  0
+ pg_catalog         | r            |                 | pg_publication_namespace                       |                  0
+ pg_catalog         | r            |                 | pg_publication_rel                             |               8192
+ pg_catalog         | r            |                 | pg_range                                       |              40960
+ pg_catalog         | r            |                 | pg_rewrite                                     |             737280
+ pg_catalog         | r            |                 | pg_seclabel                                    |               8192
+ pg_catalog         | r            |                 | pg_sequence                                    |               8192
+ pg_catalog         | r            |                 | pg_statistic                                   |             548864
+ pg_catalog         | r            |                 | pg_statistic_ext                               |               8192
+ pg_catalog         | r            |                 | pg_statistic_ext_data                          |               8192
+ pg_catalog         | r            |                 | pg_subscription_rel                            |                  0
+ pg_catalog         | r            |                 | pg_transform                                   |                  0
+ pg_catalog         | r            |                 | pg_trigger                                     |              16384
+ pg_catalog         | r            |                 | pg_ts_config                                   |              40960
+ pg_catalog         | r            |                 | pg_ts_config_map                               |              57344
+ pg_catalog         | r            |                 | pg_ts_dict                                     |              49152
+ pg_catalog         | r            |                 | pg_ts_parser                                   |              40960
+ pg_catalog         | r            |                 | pg_ts_template                                 |              40960
+ pg_catalog         | r            |                 | pg_type                                        |             172032
+ pg_catalog         | r            |                 | pg_user_mapping                                |               8192
+ public             | r            |                 | pgbench_accounts                               |          140124160
+ public             | r            |                 | pgbench_branches                               |              98304
+ public             | r            |                 | pgbench_history                                |           87121920
+ public             | r            |                 | pgbench_tellers                                |             385024
+ information_schema | r            |                 | sql_features                                   |             106496
+ information_schema | r            |                 | sql_implementation_info                        |              49152
+ information_schema | r            |                 | sql_parts                                      |              49152
+ information_schema | r            |                 | sql_sizing                                     |              49152
+ pg_toast           | t            |                 | pg_toast_1247                                  |                  0
+ pg_toast           | t            |                 | pg_toast_1255                                  |              65536
+ pg_toast           | t            |                 | pg_toast_1417                                  |                  0
+ pg_toast           | t            |                 | pg_toast_1418                                  |                  0
+ pg_toast           | t            |                 | pg_toast_14376                                 |                  0
+ pg_toast           | t            |                 | pg_toast_14381                                 |                  0
+ pg_toast           | t            |                 | pg_toast_14386                                 |                  0
+ pg_toast           | t            |                 | pg_toast_14391                                 |                  0
+ pg_toast           | t            |                 | pg_toast_16651                                 |                  0
+ pg_toast           | t            |                 | pg_toast_16670                                 |                  0
+ pg_toast           | t            |                 | pg_toast_16697                                 |                  0
+ pg_toast           | t            |                 | pg_toast_16703                                 |            1884160
+ pg_toast           | t            |                 | pg_toast_16708                                 |                  0
+ pg_toast           | t            |                 | pg_toast_2328                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2600                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2604                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2606                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2609                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2612                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2615                                  |                  0
+ pg_toast           | t            |                 | pg_toast_2618                                  |             573440
+ pg_toast           | t            |                 | pg_toast_2619                                  |             172032
+ pg_toast           | t            |                 | pg_toast_2620                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3079                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3118                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3256                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3350                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3381                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3394                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3429                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3456                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3466                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3596                                  |                  0
+ pg_toast           | t            |                 | pg_toast_3600                                  |                  0
+ pg_toast           | t            |                 | pg_toast_6106                                  |                  0
+ pg_toast           | t            |                 | pg_toast_826                                   |                  0
+(297 rows)
+
+  Simulate "lots of extents" with large size thresholds
+
+ schema_name | segment_type | tablespace_name | segment_name | size_bytes 
+-------------+--------------+-----------------+--------------+------------
+(0 rows)
+
+  For LOB (TOAST) sizes
+
+ toast_table | total_toast_size_bytes 
+-------------+------------------------
+(0 rows)
+

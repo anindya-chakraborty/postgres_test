@@ -1,0 +1,11 @@
+ ----------------------------------------
+
+ SCRIPT: ORA_C01_database_blocksize
+
+ CHECK: List the database block size
+
+ block_size 
+------------
+ 8192 bytes
+(1 row)
+

@@ -1,0 +1,244 @@
+  SCRIPT: ORA_M01_object_storage_analysis
+
+  STATS: show how all the segments are managed in each tablespace as message
+
+ schema_name | segment_type |                  segment_name                  | num_rows | storage_options 
+-------------+--------------+------------------------------------------------+----------+-----------------
+ pg_catalog  | INDEX        | pg_aggregate_fnoid_index                       |      157 | 
+ pg_catalog  | INDEX        | pg_am_name_index                               |        7 | 
+ pg_catalog  | INDEX        | pg_am_oid_index                                |        7 | 
+ pg_catalog  | INDEX        | pg_amop_fam_strat_index                        |      945 | 
+ pg_catalog  | INDEX        | pg_amop_oid_index                              |      945 | 
+ pg_catalog  | INDEX        | pg_amop_opr_fam_index                          |      945 | 
+ pg_catalog  | INDEX        | pg_amproc_fam_proc_index                       |      696 | 
+ pg_catalog  | INDEX        | pg_amproc_oid_index                            |      696 | 
+ pg_catalog  | INDEX        | pg_attrdef_adrelid_adnum_index                 |        0 | 
+ pg_catalog  | INDEX        | pg_attrdef_oid_index                           |        0 | 
+ pg_catalog  | INDEX        | pg_attribute_relid_attnam_index                |     3406 | 
+ pg_catalog  | INDEX        | pg_attribute_relid_attnum_index                |     3406 | 
+ pg_catalog  | INDEX        | pg_auth_members_grantor_index                  |        3 | 
+ pg_catalog  | INDEX        | pg_auth_members_member_role_index              |        3 | 
+ pg_catalog  | INDEX        | pg_auth_members_oid_index                      |        3 | 
+ pg_catalog  | INDEX        | pg_auth_members_role_member_index              |        3 | 
+ pg_catalog  | INDEX        | pg_authid_oid_index                            |       15 | 
+ pg_catalog  | INDEX        | pg_authid_rolname_index                        |       15 | 
+ pg_catalog  | INDEX        | pg_cast_oid_index                              |      229 | 
+ pg_catalog  | INDEX        | pg_cast_source_target_index                    |      229 | 
+ pg_catalog  | INDEX        | pg_class_oid_index                             |      446 | 
+ pg_catalog  | INDEX        | pg_class_relname_nsp_index                     |      446 | 
+ pg_catalog  | INDEX        | pg_class_tblspc_relfilenode_index              |      446 | 
+ pg_catalog  | INDEX        | pg_collation_name_enc_nsp_index                |     1794 | 
+ pg_catalog  | INDEX        | pg_collation_oid_index                         |     1794 | 
+ pg_catalog  | INDEX        | pg_constraint_conname_nsp_index                |      112 | 
+ pg_catalog  | INDEX        | pg_constraint_conparentid_index                |      112 | 
+ pg_catalog  | INDEX        | pg_constraint_conrelid_contypid_conname_index  |      112 | 
+ pg_catalog  | INDEX        | pg_constraint_contypid_index                   |      112 | 
+ pg_catalog  | INDEX        | pg_constraint_oid_index                        |      112 | 
+ pg_catalog  | INDEX        | pg_conversion_default_index                    |      128 | 
+ pg_catalog  | INDEX        | pg_conversion_name_nsp_index                   |      128 | 
+ pg_catalog  | INDEX        | pg_conversion_oid_index                        |      128 | 
+ pg_catalog  | INDEX        | pg_database_datname_index                      |        1 | 
+ pg_catalog  | INDEX        | pg_database_oid_index                          |        1 | 
+ pg_catalog  | INDEX        | pg_db_role_setting_databaseid_rol_index        |        0 | 
+ pg_catalog  | INDEX        | pg_default_acl_oid_index                       |        0 | 
+ pg_catalog  | INDEX        | pg_default_acl_role_nsp_obj_index              |        0 | 
+ pg_catalog  | INDEX        | pg_depend_depender_index                       |     1867 | 
+ pg_catalog  | INDEX        | pg_depend_reference_index                      |     1867 | 
+ pg_catalog  | INDEX        | pg_description_o_c_o_index                     |     5170 | 
+ pg_catalog  | INDEX        | pg_enum_oid_index                              |        0 | 
+ pg_catalog  | INDEX        | pg_enum_typid_label_index                      |        0 | 
+ pg_catalog  | INDEX        | pg_enum_typid_sortorder_index                  |        0 | 
+ pg_catalog  | INDEX        | pg_event_trigger_evtname_index                 |        0 | 
+ pg_catalog  | INDEX        | pg_event_trigger_oid_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_extension_name_index                        |        1 | 
+ pg_catalog  | INDEX        | pg_extension_oid_index                         |        1 | 
+ pg_catalog  | INDEX        | pg_foreign_data_wrapper_name_index             |        0 | 
+ pg_catalog  | INDEX        | pg_foreign_data_wrapper_oid_index              |        0 | 
+ pg_catalog  | INDEX        | pg_foreign_server_name_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_foreign_server_oid_index                    |        0 | 
+ pg_catalog  | INDEX        | pg_foreign_table_relid_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_index_indexrelid_index                      |      172 | 
+ pg_catalog  | INDEX        | pg_index_indrelid_index                        |      172 | 
+ pg_catalog  | INDEX        | pg_inherits_parent_index                       |        0 | 
+ pg_catalog  | INDEX        | pg_inherits_relid_seqno_index                  |        0 | 
+ pg_catalog  | INDEX        | pg_init_privs_o_c_o_index                      |      220 | 
+ pg_catalog  | INDEX        | pg_language_name_index                         |        4 | 
+ pg_catalog  | INDEX        | pg_language_oid_index                          |        4 | 
+ pg_catalog  | INDEX        | pg_largeobject_loid_pn_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_largeobject_metadata_oid_index              |        0 | 
+ pg_catalog  | INDEX        | pg_namespace_nspname_index                     |        4 | 
+ pg_catalog  | INDEX        | pg_namespace_oid_index                         |        4 | 
+ pg_catalog  | INDEX        | pg_opclass_am_name_nsp_index                   |      177 | 
+ pg_catalog  | INDEX        | pg_opclass_oid_index                           |      177 | 
+ pg_catalog  | INDEX        | pg_operator_oid_index                          |      799 | 
+ pg_catalog  | INDEX        | pg_operator_oprname_l_r_n_index                |      799 | 
+ pg_catalog  | INDEX        | pg_opfamily_am_name_nsp_index                  |      146 | 
+ pg_catalog  | INDEX        | pg_opfamily_oid_index                          |      146 | 
+ pg_catalog  | INDEX        | pg_parameter_acl_oid_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_parameter_acl_parname_index                 |        0 | 
+ pg_catalog  | INDEX        | pg_partitioned_table_partrelid_index           |        0 | 
+ pg_catalog  | INDEX        | pg_policy_oid_index                            |        0 | 
+ pg_catalog  | INDEX        | pg_policy_polrelid_polname_index               |        0 | 
+ pg_catalog  | INDEX        | pg_proc_oid_index                              |     3297 | 
+ pg_catalog  | INDEX        | pg_proc_proname_args_nsp_index                 |     3297 | 
+ pg_catalog  | INDEX        | pg_publication_namespace_oid_index             |        0 | 
+ pg_catalog  | INDEX        | pg_publication_namespace_pnnspid_pnpubid_index |        0 | 
+ pg_catalog  | INDEX        | pg_publication_oid_index                       |        0 | 
+ pg_catalog  | INDEX        | pg_publication_pubname_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_publication_rel_oid_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_publication_rel_prpubid_index               |        0 | 
+ pg_catalog  | INDEX        | pg_publication_rel_prrelid_prpubid_index       |        0 | 
+ pg_catalog  | INDEX        | pg_range_rngmultitypid_index                   |        6 | 
+ pg_catalog  | INDEX        | pg_range_rngtypid_index                        |        6 | 
+ pg_catalog  | INDEX        | pg_replication_origin_roiident_index           |        0 | 
+ pg_catalog  | INDEX        | pg_replication_origin_roname_index             |        0 | 
+ pg_catalog  | INDEX        | pg_rewrite_oid_index                           |      143 | 
+ pg_catalog  | INDEX        | pg_rewrite_rel_rulename_index                  |      143 | 
+ pg_catalog  | INDEX        | pg_seclabel_object_index                       |        0 | 
+ pg_catalog  | INDEX        | pg_sequence_seqrelid_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_shdepend_depender_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_shdepend_reference_index                    |        0 | 
+ pg_catalog  | INDEX        | pg_shdescription_o_c_index                     |        1 | 
+ pg_catalog  | INDEX        | pg_shseclabel_object_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_statistic_ext_data_stxoid_inh_index         |        0 | 
+ pg_catalog  | INDEX        | pg_statistic_ext_name_index                    |        0 | 
+ pg_catalog  | INDEX        | pg_statistic_ext_oid_index                     |        0 | 
+ pg_catalog  | INDEX        | pg_statistic_ext_relid_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_statistic_relid_att_inh_index               |      486 | 
+ pg_catalog  | INDEX        | pg_subscription_oid_index                      |        0 | 
+ pg_catalog  | INDEX        | pg_subscription_rel_srrelid_srsubid_index      |        0 | 
+ pg_catalog  | INDEX        | pg_subscription_subname_index                  |        0 | 
+ pg_catalog  | INDEX        | pg_tablespace_oid_index                        |        2 | 
+ pg_catalog  | INDEX        | pg_tablespace_spcname_index                    |        2 | 
+ pg_catalog  | INDEX        | pg_transform_oid_index                         |        0 | 
+ pg_catalog  | INDEX        | pg_transform_type_lang_index                   |        0 | 
+ pg_catalog  | INDEX        | pg_trigger_oid_index                           |        0 | 
+ pg_catalog  | INDEX        | pg_trigger_tgconstraint_index                  |        0 | 
+ pg_catalog  | INDEX        | pg_trigger_tgrelid_tgname_index                |        0 | 
+ pg_catalog  | INDEX        | pg_ts_config_cfgname_index                     |       29 | 
+ pg_catalog  | INDEX        | pg_ts_config_map_index                         |      551 | 
+ pg_catalog  | INDEX        | pg_ts_config_oid_index                         |       29 | 
+ pg_catalog  | INDEX        | pg_ts_dict_dictname_index                      |       29 | 
+ pg_catalog  | INDEX        | pg_ts_dict_oid_index                           |       29 | 
+ pg_catalog  | INDEX        | pg_ts_parser_oid_index                         |        1 | 
+ pg_catalog  | INDEX        | pg_ts_parser_prsname_index                     |        1 | 
+ pg_catalog  | INDEX        | pg_ts_template_oid_index                       |        5 | 
+ pg_catalog  | INDEX        | pg_ts_template_tmplname_index                  |        5 | 
+ pg_catalog  | INDEX        | pg_type_oid_index                              |      645 | 
+ pg_catalog  | INDEX        | pg_type_typname_nsp_index                      |      645 | 
+ pg_catalog  | INDEX        | pg_user_mapping_oid_index                      |        0 | 
+ pg_catalog  | INDEX        | pg_user_mapping_user_server_index              |        0 | 
+ pg_catalog  | TABLE        | pg_aggregate                                   |      157 | 
+ pg_catalog  | TABLE        | pg_am                                          |        7 | 
+ pg_catalog  | TABLE        | pg_amop                                        |      945 | 
+ pg_catalog  | TABLE        | pg_amproc                                      |      696 | 
+ pg_catalog  | TABLE        | pg_attrdef                                     |        0 | 
+ pg_catalog  | TABLE        | pg_attribute                                   |     3047 | 
+ pg_catalog  | TABLE        | pg_auth_members                                |        3 | 
+ pg_catalog  | TABLE        | pg_authid                                      |       15 | 
+ pg_catalog  | TABLE        | pg_cast                                        |      229 | 
+ pg_catalog  | TABLE        | pg_class                                       |      446 | 
+ pg_catalog  | TABLE        | pg_collation                                   |     1794 | 
+ pg_catalog  | TABLE        | pg_constraint                                  |      112 | 
+ pg_catalog  | TABLE        | pg_conversion                                  |      128 | 
+ pg_catalog  | TABLE        | pg_database                                    |        2 | 
+ pg_catalog  | TABLE        | pg_db_role_setting                             |        0 | 
+ pg_catalog  | TABLE        | pg_default_acl                                 |        0 | 
+ pg_catalog  | TABLE        | pg_depend                                      |     1867 | 
+ pg_catalog  | TABLE        | pg_description                                 |     5170 | 
+ pg_catalog  | TABLE        | pg_enum                                        |        0 | 
+ pg_catalog  | TABLE        | pg_event_trigger                               |        0 | 
+ pg_catalog  | TABLE        | pg_extension                                   |        1 | 
+ pg_catalog  | TABLE        | pg_foreign_data_wrapper                        |        0 | 
+ pg_catalog  | TABLE        | pg_foreign_server                              |        0 | 
+ pg_catalog  | TABLE        | pg_foreign_table                               |        0 | 
+ pg_catalog  | TABLE        | pg_index                                       |      172 | 
+ pg_catalog  | TABLE        | pg_inherits                                    |        0 | 
+ pg_catalog  | TABLE        | pg_init_privs                                  |      220 | 
+ pg_catalog  | TABLE        | pg_language                                    |        4 | 
+ pg_catalog  | TABLE        | pg_largeobject                                 |        0 | 
+ pg_catalog  | TABLE        | pg_largeobject_metadata                        |        0 | 
+ pg_catalog  | TABLE        | pg_namespace                                   |        4 | 
+ pg_catalog  | TABLE        | pg_opclass                                     |      177 | 
+ pg_catalog  | TABLE        | pg_operator                                    |      799 | 
+ pg_catalog  | TABLE        | pg_opfamily                                    |      146 | 
+ pg_catalog  | TABLE        | pg_parameter_acl                               |        0 | 
+ pg_catalog  | TABLE        | pg_partitioned_table                           |        0 | 
+ pg_catalog  | TABLE        | pg_policy                                      |        0 | 
+ pg_catalog  | TABLE        | pg_proc                                        |     3297 | 
+ pg_catalog  | TABLE        | pg_publication                                 |        0 | 
+ pg_catalog  | TABLE        | pg_publication_namespace                       |        0 | 
+ pg_catalog  | TABLE        | pg_publication_rel                             |        0 | 
+ pg_catalog  | TABLE        | pg_range                                       |        6 | 
+ pg_catalog  | TABLE        | pg_replication_origin                          |        0 | 
+ pg_catalog  | TABLE        | pg_rewrite                                     |      143 | 
+ pg_catalog  | TABLE        | pg_seclabel                                    |        0 | 
+ pg_catalog  | TABLE        | pg_sequence                                    |        0 | 
+ pg_catalog  | TABLE        | pg_shdepend                                    |        0 | 
+ pg_catalog  | TABLE        | pg_shdescription                               |        1 | 
+ pg_catalog  | TABLE        | pg_shseclabel                                  |        0 | 
+ pg_catalog  | TABLE        | pg_statistic                                   |      486 | 
+ pg_catalog  | TABLE        | pg_statistic_ext                               |        0 | 
+ pg_catalog  | TABLE        | pg_statistic_ext_data                          |        0 | 
+ pg_catalog  | TABLE        | pg_subscription                                |        0 | 
+ pg_catalog  | TABLE        | pg_subscription_rel                            |        0 | 
+ pg_catalog  | TABLE        | pg_tablespace                                  |        2 | 
+ pg_catalog  | TABLE        | pg_transform                                   |        0 | 
+ pg_catalog  | TABLE        | pg_trigger                                     |        0 | 
+ pg_catalog  | TABLE        | pg_ts_config                                   |       29 | 
+ pg_catalog  | TABLE        | pg_ts_config_map                               |      551 | 
+ pg_catalog  | TABLE        | pg_ts_dict                                     |       29 | 
+ pg_catalog  | TABLE        | pg_ts_parser                                   |        1 | 
+ pg_catalog  | TABLE        | pg_ts_template                                 |        5 | 
+ pg_catalog  | TABLE        | pg_type                                        |      645 | 
+ pg_catalog  | TABLE        | pg_user_mapping                                |        0 | 
+(188 rows)
+
+  STATS: list compressed tables
+
+       table_name        | compression 
+-------------------------+-------------
+ pg_statistic            | YES
+ pg_type                 | YES
+ pg_foreign_table        | YES
+ pg_authid               | YES
+ pg_statistic_ext_data   | YES
+ pg_user_mapping         | YES
+ pg_subscription         | YES
+ pg_proc                 | YES
+ pg_attrdef              | YES
+ pg_constraint           | YES
+ pg_language             | YES
+ pg_aggregate            | YES
+ pg_statistic_ext        | YES
+ pg_rewrite              | YES
+ pg_trigger              | YES
+ pg_event_trigger        | YES
+ pg_description          | YES
+ pg_namespace            | YES
+ pg_database             | YES
+ pg_db_role_setting      | YES
+ pg_tablespace           | YES
+ pg_shdescription        | YES
+ pg_ts_dict              | YES
+ pg_extension            | YES
+ pg_foreign_data_wrapper | YES
+ pg_foreign_server       | YES
+ pg_policy               | YES
+ pg_replication_origin   | YES
+ pg_default_acl          | YES
+ pg_init_privs           | YES
+ pg_seclabel             | YES
+ pg_shseclabel           | YES
+ pg_collation            | YES
+ pg_parameter_acl        | YES
+ pg_partitioned_table    | YES
+ pg_publication_rel      | YES
+(36 rows)
+
+  STATS: list compressed table partitions
+
+ table_name | partition_name 
+------------+----------------
+(0 rows)
+

@@ -1,0 +1,6 @@
+ SCRIPT: S01_bespoke_triggers_defined
+
+ trigger_name | triggering_event | referencing_names | when_clause | table_name 
+--------------+------------------+-------------------+-------------+------------
+(0 rows)
+

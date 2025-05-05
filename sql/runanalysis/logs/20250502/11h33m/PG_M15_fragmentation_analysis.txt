@@ -1,0 +1,83 @@
+ SCRIPT: ORA_M15_fragmentation_analysis
+
+ Bloating estimate
+
+     schemaname     |         tablename          | live_tuples | total_pages | expected_pages |        pct         | bloat_pct | wasted_space_mb 
+--------------------+----------------------------+-------------+-------------+----------------+--------------------+-----------+-----------------
+ public             | pgbench_tellers            |         100 |          43 |              1 |  97.67441860465117 |     97.00 |        0.328125
+ public             | pgbench_branches           |          10 |           8 |              1 |               87.5 |     87.00 |       0.0546875
+ pg_catalog         | pg_depend                  |        1867 |          16 |             11 |              31.25 |     31.00 |       0.0390625
+ pg_catalog         | pg_index                   |         172 |           5 |              4 |                 20 |     20.00 |       0.0078125
+ pg_catalog         | pg_amproc                  |         696 |           5 |              4 |                 20 |     20.00 |       0.0078125
+ pg_catalog         | pg_attribute               |        3047 |          75 |             62 | 17.333333333333332 |     17.00 |       0.1015625
+ pg_catalog         | pg_description             |        5170 |          45 |             38 | 15.555555555555555 |     15.00 |       0.0546875
+ public             | pgbench_accounts           |     1000035 |       17078 |          14649 | 14.222976929382831 |     14.00 |      18.9765625
+ information_schema | sql_features               |         756 |           8 |              7 |               12.5 |     12.00 |       0.0078125
+ public             | pgbench_history            |     1641506 |       10459 |           9418 |  9.953150396787455 |      9.00 |       8.1328125
+ pg_catalog         | pg_collation               |        1794 |          32 |             30 |               6.25 |      6.00 |        0.015625
+ statistics         | ash_stat_statements_sample |       20613 |        1568 |           1478 |  5.739795918367347 |      5.00 |        0.703125
+ pg_catalog         | pg_extension               |           1 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_init_privs              |         220 |           3 |              3 |                  0 |      0.00 |               0
+ pg_catalog         | pg_language                |           4 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_namespace               |           4 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_opclass                 |         177 |           3 |              3 |                  0 |      0.00 |               0
+ pg_catalog         | pg_operator                |         799 |          14 |             14 |                  0 |      0.00 |               0
+ pg_catalog         | pg_opfamily                |         146 |           2 |              2 |                  0 |      0.00 |               0
+ pg_catalog         | pg_range                   |           6 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_rewrite                 |         143 |          13 |             13 |                  0 |      0.00 |               0
+ pg_catalog         | pg_shdescription           |           1 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_tablespace              |           2 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_ts_config               |          29 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_ts_config_map           |         551 |           3 |              3 |                  0 |      0.00 |               0
+ pg_catalog         | pg_ts_dict                 |          29 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_ts_parser               |           1 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_ts_template             |           5 |           1 |              1 |                  0 |      0.00 |               0
+ statistics         | ash_wait_sampling_sample   |         954 |           8 |              8 |                  0 |      0.00 |               0
+ information_schema | sql_implementation_info    |          12 |           1 |              1 |                  0 |      0.00 |               0
+ information_schema | sql_parts                  |          11 |           1 |              1 |                  0 |      0.00 |               0
+ information_schema | sql_sizing                 |          23 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_aggregate               |         157 |           2 |              2 |                  0 |      0.00 |               0
+ pg_catalog         | pg_am                      |           7 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_amop                    |         945 |           7 |              7 |                  0 |      0.00 |               0
+ pg_catalog         | pg_auth_members            |           3 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_authid                  |          15 |           1 |              1 |                  0 |      0.00 |               0
+ pg_catalog         | pg_cast                    |         229 |           2 |              2 |                  0 |      0.00 |               0
+ pg_catalog         | pg_conversion              |         128 |           2 |              2 |                  0 |      0.00 |               0
+ pg_catalog         | pg_database                |           2 |           1 |              1 |                  0 |      0.00 |               0
+ statistics         | ash_session_sample         |         258 |           5 |              5 |                  0 |      0.00 |               0
+ pg_catalog         | pg_class                   |         446 |          14 |             15 | -7.142857142857143 |     -7.00 |      -0.0078125
+ pg_catalog         | pg_type                    |         645 |          16 |             20 |                -25 |    -25.00 |        -0.03125
+ pg_catalog         | pg_constraint              |         112 |           3 |             12 |               -300 |   -300.00 |      -0.0703125
+ pg_catalog         | pg_proc                    |        3297 |          98 |            799 | -715.3061224489796 |   -715.00 |      -5.4765625
+(45 rows)
+
+ See dead tuple count per table:
+
+         table_name         | dead_tuples | live_tuples 
+----------------------------+-------------+-------------
+ pgbench_accounts           |       46638 |     1000035
+ ash_wait_sampling_sample   |           7 |        1088
+ job                        |           7 |           0
+ ash_session_sample         |           0 |         305
+ ash_stat_statements_sample |           0 |       21570
+ pgbench_history            |           0 |     1664440
+ job_run_details            |           0 |           0
+ pgbench_branches           |           0 |          10
+ pgbench_tellers            |           0 |         100
+(9 rows)
+
+ Table size vs Index size
+
+ schemaname |         table_name         | total_size | table_size | index_size 
+------------+----------------------------+------------+------------+------------
+ public     | pgbench_accounts           | 155 MB     | 134 MB     | 22 MB
+ public     | pgbench_history            | 83 MB      | 83 MB      | 48 kB
+ statistics | ash_stat_statements_sample | 15 MB      | 13 MB      | 1920 kB
+ public     | pgbench_tellers            | 392 kB     | 344 kB     | 48 kB
+ public     | pgbench_branches           | 112 kB     | 64 kB      | 48 kB
+ statistics | ash_wait_sampling_sample   | 104 kB     | 72 kB      | 32 kB
+ statistics | ash_session_sample         | 80 kB      | 48 kB      | 32 kB
+ cron       | job_run_details            | 72 kB      | 24 kB      | 48 kB
+ cron       | job                        | 48 kB      | 8192 bytes | 40 kB
+(9 rows)
+

@@ -1,0 +1,6 @@
+wait_event,samples
+tuple,6
+,6
+transactionid,5
+WALWrite,4
+WALSync,4

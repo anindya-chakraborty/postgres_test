@@ -1,0 +1,27 @@
+ SCRIPT: ORA_E03_archive_logs_defined
+
+ Show archive-related configuration
+
+          name           |  setting   | unit |              category              |                                  short_desc                                   
+-------------------------+------------+------+------------------------------------+-------------------------------------------------------------------------------
+ archive_cleanup_command |            |      | Write-Ahead Log / Archive Recovery | Sets the shell command that will be executed at every restart point.
+ archive_command         | (disabled) |      | Write-Ahead Log / Archiving        | Sets the shell command that will be called to archive a WAL file.
+ archive_library         |            |      | Write-Ahead Log / Archiving        | Sets the library that will be called to archive a WAL file.
+ archive_mode            | off        |      | Write-Ahead Log / Archiving        | Allows archiving of WAL files using archive_command.
+ archive_timeout         | 0          | s    | Write-Ahead Log / Archiving        | Sets the amount of time to wait before forcing a switch to the next WAL file.
+(5 rows)
+
+ Show if archiving is enabled
+
+    archive_status     
+-----------------------
+ Archiving is DISABLED
+(1 row)
+
+ Show archive file destination
+
+  setting   
+------------
+ (disabled)
+(1 row)
+
